@@ -2,7 +2,7 @@ enum Repetitions {
     static func findLongestRepetition<S>(_ sequnece: S) -> Int where S: Sequence, S.Element == Character {
         var max = 0
         var counter = 0
-        var lastCharacter: Character = "0"
+        var lastCharacter: Character?
         sequnece.forEach { character in
             if character == lastCharacter {
                 counter += 1
